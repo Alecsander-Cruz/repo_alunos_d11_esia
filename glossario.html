@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossário operacional e apoio à interpretação · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>Glossário operacional e apoio à interpretação</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="README.html">Índice</a>
+<a href="glossario.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p>Material prévio da disciplina D1.1. Os termos abaixo são usados para tomar decisões de engenharia; não constituem uma aula de treinamento de modelos. As traduções são explicações textuais, não proposta de sinais em Libras. O vocabulário deve ser compartilhado com o intérprete pelo fluxo da coordenação.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Sentido usado nas aulas</th>
+<th>Consequência prática</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IA generativa</td>
+<td>Sistemas que produzem conteúdo a partir de entradas e padrões aprendidos</td>
+<td>Conteúdo produzido precisa ser avaliado para a tarefa</td>
+</tr>
+<tr>
+<td>Aprendizado de máquina</td>
+<td>Técnica em que o comportamento é aprendido de exemplos, e não escrito como regra</td>
+<td>Padrão aprendido precisa ser testado; regra escrita pode ser lida</td>
+</tr>
+<tr>
+<td>Treino e inferência</td>
+<td>Treino ajusta os parâmetros do modelo antes do uso; na inferência eles ficam fixos e só o contexto muda</td>
+<td>O que a tarefa exige e não estava no treino precisa vir no contexto</td>
+</tr>
+<tr>
+<td>LLM — modelo de linguagem</td>
+<td>Modelo que representa e gera sequências de tokens</td>
+<td>A saída pode parecer adequada e ainda conter erro</td>
+</tr>
+<tr>
+<td>Modelo</td>
+<td>Componente que recebe entradas e produz saídas</td>
+<td>Distinguir capacidade do modelo de recursos adicionados pelo produto</td>
+</tr>
+<tr>
+<td>Produto</td>
+<td>Interface e serviços construídos em torno de modelos</td>
+<td>Histórico, arquivos, busca e limites dependem do produto</td>
+</tr>
+<tr>
+<td>Ferramenta</td>
+<td>Recurso que apoia ou executa uma ação, como editor ou terminal</td>
+<td>Permissões e efeitos precisam ser compreendidos</td>
+</tr>
+<tr>
+<td>Prompt — instrução de entrada</td>
+<td>Texto/instruções enviados ao modelo com a tarefa</td>
+<td>Tornar objetivo, restrições e forma de verificação explícitos</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Unidade de representação processada pelo modelo; não equivale necessariamente a palavra</td>
+<td>Comprimento, orçamento e custo podem ser expressos em tokens</td>
+</tr>
+<tr>
+<td>Contexto</td>
+<td>Informações disponibilizadas para a tarefa na interação</td>
+<td>Contexto relevante ajuda; excesso ou conflito também pode prejudicar</td>
+</tr>
+<tr>
+<td>Janela de contexto</td>
+<td>Limite de tokens que uma configuração consegue processar</td>
+<td>Capacidade de entrada não garante uso correto de toda informação</td>
+</tr>
+<tr>
+<td>Variabilidade</td>
+<td>Diferenças entre saídas em execuções de uma tarefa</td>
+<td>Registrar condições e verificar cada artefato relevante</td>
+</tr>
+<tr>
+<td>Não-determinismo</td>
+<td>Ausência de garantia de resultado idêntico nas condições utilizadas</td>
+<td>Três saídas iguais não demonstram determinismo universal</td>
+</tr>
+<tr>
+<td>Alucinação</td>
+<td>Conteúdo sem apoio adequado nos fatos ou fontes da tarefa</td>
+<td>Conferir a afirmação com referência ou teste independente</td>
+</tr>
+<tr>
+<td>Latência</td>
+<td>Tempo entre iniciar uma operação e obter o resultado definido para a medição</td>
+<td>Identificar o que foi medido, incluindo espera e ambiente</td>
+</tr>
+<tr>
+<td>Custo</td>
+<td>Recursos consumidos para obter e verificar um resultado</td>
+<td>Incluir revisão e retrabalho, além de eventual cobrança por uso</td>
+</tr>
+<tr>
+<td>Critério de aceite</td>
+<td>Condição observável para considerar uma tarefa atendida</td>
+<td>Definir antes de julgar a resposta</td>
+</tr>
+<tr>
+<td>Processo de software</td>
+<td>Atividades que levam uma necessidade a um sistema em uso: requisitos, projeto, implementação, verificação e operação</td>
+<td>Cada etapa deixa um artefato; código é um deles</td>
+</tr>
+<tr>
+<td>Validação</td>
+<td>Conferência do resultado contra a necessidade de quem pediu</td>
+<td>Um artefato pode estar verificado e ainda não resolver o problema</td>
+</tr>
+<tr>
+<td>Verificação</td>
+<td>Conferência do artefato contra requisitos e evidências</td>
+<td>Testes, inspeção e comparação são complementares</td>
+</tr>
+<tr>
+<td>Oráculo de teste</td>
+<td>Fonte do resultado esperado usada para julgar uma execução</td>
+<td>Uma resposta gerada não vira referência correta só por ter sido gerada</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>Registro das diferenças entre versões de um arquivo</td>
+<td>Revisar o que mudou, não apenas executar o resultado</td>
+</tr>
+<tr>
+<td>Autonomia</td>
+<td>Liberdade para escolher ou executar ações sem nova intervenção</td>
+<td>Ajustar ao risco, reversibilidade e qualidade da verificação</td>
+</tr>
+<tr>
+<td>HITL — humano no fluxo</td>
+<td>Ponto em que uma pessoa decide, revisa ou autoriza</td>
+<td>Aprovação de ação e verificação de qualidade têm funções diferentes</td>
+</tr>
+<tr>
+<td>Fallback — alternativa de continuidade</td>
+<td>Caminho disponível quando a opção principal falha</td>
+<td>Manter atividade acessível sem depender de uma única ferramenta</td>
+</tr>
+<tr>
+<td>Proveniência</td>
+<td>Origem e condições de produção de uma informação</td>
+<td>Separar medição, simulação, referência e inferência</td>
+</tr>
+<tr>
+<td>Exploração</td>
+<td>Investigação da oportunidade e do problema</td>
+<td>Perguntas abertas e evidências iniciais</td>
+</tr>
+<tr>
+<td>Protótipo</td>
+<td>Demonstração delimitada de viabilidade</td>
+<td>Funcionar em exemplo não demonstra operação sustentada</td>
+</tr>
+<tr>
+<td>Piloto</td>
+<td>Uso limitado, com usuários e critérios de acompanhamento definidos</td>
+<td>Exigir escopo, responsável, monitoramento e regra de interrupção</td>
+</tr>
+<tr>
+<td>Uso sustentado</td>
+<td>Prática operada com responsabilidades, avaliação e manutenção</td>
+<td>Observar desempenho e riscos continuamente</td>
+</tr>
+</tbody>
+</table></div>
+<div class="secao"><h2 id="distincoes-para-reforcar-oralmente">Distinções para reforçar oralmente</h2></div>
+<p>“Eu obtive uma resposta” descreve uma geração. “Eu aceitei uma resposta” exige critério e verificação.</p>
+<p>“O teste passou” descreve um teste e seu alcance. Não implica que todos os requisitos, riscos e condições foram cobertos.</p>
+<p>“O modelo roda localmente” descreve local de execução. Não garante determinismo, ausência de custo, privacidade de todo o fluxo ou adequação a qualquer tarefa.</p>
+<p>“O resultado foi simulado para a aula” identifica uma ilustração. Não equivale a observação de comportamento de fornecedor ou modelo real.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

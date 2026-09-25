@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AV1.3 — Ligar requisito, verificação e documentação · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>AV1.3 — Ligar requisito, verificação e documentação</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../../README.html">Índice</a>
+<a href="README.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>Individual — 35min — B3, 26/09/2026, 16h15–16h50 (Brasília).</strong> Integra AV1, que vale 20% pela média simples dos desafios dos blocos com presença. <a href="../../avaliacao.html">Avaliação e rubrica pública</a>.</p>
+<div class="secao"><h2 id="objetivo">Objetivo</h2></div>
+<p>Quero transformar R2 em casos de verificação e documentação consistentes, escolhendo uma etapa delegável e uma condição explícita de aceite humano.</p>
+<div class="secao"><h2 id="contexto-e-insumos">Contexto e insumos</h2></div>
+<p>A manutenção de Fila Clara precisa preparar a revisão de uma listagem. <strong>R2:</strong> incluir <code>aberto</code> e <code>em_andamento</code>, excluir <code>fechado</code> e preservar a ordem de entrada. <strong>R4:</strong> o texto deve descrever o mesmo comportamento. Todas as entradas abaixo são fictícias e válidas. <a href="../../caso/regras.html">Contrato completo</a>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Posição na entrada</th>
+<th>id</th>
+<th>departamento</th>
+<th>estado</th>
+<th style="text-align: right;">impacto</th>
+<th style="text-align: right;">urgencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>TR-31</td>
+<td>Oficina</td>
+<td>em_andamento</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>TR-32</td>
+<td>Laboratório</td>
+<td>fechado</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>TR-33</td>
+<td>Oficina</td>
+<td>aberto</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>O material deste desafio é o contrato e esta entrada; não se exige alterar a implementação do repositório. A saída calculada a partir do contrato é <strong>esperada</strong>, não observada em execução. <a href="template-registro.html">Template individual</a>.</p>
+<div class="secao"><h2 id="passos-35min">Passos — 35min</h2></div>
+<ol>
+<li><strong>Ler — 5min.</strong> Identifique as quatro obrigações de R2 e escreva seu critério de aceite.</li>
+<li><strong>Produzir individualmente — 20min.</strong> Elabore três casos de verificação, um para cada estado, indicando entrada, IDs esperados e obrigação verificada. Use os registros fornecidos, isolados ou combinados. Registre também os IDs esperados quando os três entram na ordem da tabela e explique como verificaria a preservação dessa ordem. Escreva uma documentação curta, de até três frases. Escolha uma etapa em que admitiria assistência e descreva o que a pessoa responsável deve verificar antes do aceite. Compare brevemente com a realização dessa etapa sem IA e registre um limite da cobertura.</li>
+<li><strong>Revisar pela rubrica — 5min.</strong> Confira a consistência entre casos, ordem, documentação e critério de aceite; diferencie planejamento de teste e resultado executado.</li>
+<li><strong>Entregar — 5min.</strong> Finalize um registro individual de até uma página, pelo canal a ser informado pelo professor.</li>
+</ol>
+<div class="secao"><h2 id="entrega-e-checklist">Entrega e checklist</h2></div>
+<ul>
+<li>[ ] Três casos com entrada/esperado/regra, cobrindo os três estados.</li>
+<li>[ ] IDs esperados da entrada combinada e verificação explícita da ordem.</li>
+<li>[ ] Documentação de até três frases coerente com o mesmo contrato.</li>
+<li>[ ] Etapa delegável, responsável, aceite, alternativa sem IA e limite.</li>
+<li>[ ] Origem fictícia e status de cada evidência declarados.</li>
+</ul>
+<p><strong>Critério de conclusão:</strong> outro leitor consegue conferir os casos e o texto contra R2/R4 e identificar a fronteira da assistência escolhida.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Critério AV1</th>
+<th style="text-align: right;">Peso</th>
+<th>Indicadores deste desafio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicação/decisão</td>
+<td style="text-align: right;">30%</td>
+<td>Etapa e autonomia justificadas; critério e responsável pelo aceite.</td>
+</tr>
+<tr>
+<td>Evidência</td>
+<td style="text-align: right;">40%</td>
+<td>Três estados, ordem da entrada, resultados esperados e documentação rastreáveis a R2/R4.</td>
+</tr>
+<tr>
+<td>Limites/alternativa</td>
+<td style="text-align: right;">30%</td>
+<td>Comparação com etapa sem IA; limite de cobertura e condição para rever o aceite.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dica:</strong> uma verificação de pertencimento e uma verificação de ordem respondem a perguntas diferentes. A inspeção textual tem os mesmos critérios que uma execução opcional; nenhum código, conta, API, Git ou apresentação é obrigatório. Declare IA se utilizada.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

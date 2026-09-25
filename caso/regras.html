@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fila Clara — cenário e contrato · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>Fila Clara — cenário e contrato</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../README.html">Índice</a>
+<a href="regras.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p>Fila Clara é uma organização fictícia que mantém chamados internos de duas áreas: Oficina e Laboratório. A equipe quer experimentar apoio de IA para compreender regras, propor testes, revisar código e documentar mudanças. Resultados plausíveis precisam de evidências antes de uma decisão de uso.</p>
+<p>O caso acompanha as seis aulas da disciplina D1.1. Seu código curto serve à análise do trabalho de engenharia: ler um requisito, verificar um artefato, registrar uma decisão e identificar o que a evidência ainda não permite concluir.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Regra</th>
+<th>Comportamento esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1 — prioridade</td>
+<td><code>impacto</code> e <code>urgencia</code> são inteiros de 1 a 3. O escore é a soma. Escore maior ou igual a 5 produz <code>alta</code>; maior ou igual a 3 e menor que 5 produz <code>media</code>; menor que 3 produz <code>baixa</code>.</td>
+</tr>
+<tr>
+<td>R2 — chamados ativos</td>
+<td><code>listar_ativos</code> inclui os estados <code>aberto</code> e <code>em_andamento</code>, exclui <code>fechado</code> e preserva a ordem de entrada.</td>
+</tr>
+<tr>
+<td>R3 — visibilidade</td>
+<td><code>pode_visualizar</code> permite acesso somente à pessoa do mesmo departamento do chamado, independentemente de estado ou prioridade. Os nomes de departamentos vêm dos dados controlados do caso.</td>
+</tr>
+<tr>
+<td>R4 — documentação</td>
+<td>A documentação descreve essas mesmas regras. Teste e texto gerados com apoio de IA precisam ser confrontados com este contrato.</td>
+</tr>
+</tbody>
+</table></div>
+<p>As funções são <code>prioridade(impacto, urgencia)</code>, <code>listar_ativos(chamados)</code> e <code>pode_visualizar(chamado, departamento)</code>. A prioridade é calculada; os registros contêm somente <code>id</code>, <code>departamento</code>, <code>estado</code>, <code>impacto</code> e <code>urgencia</code>. A grafia de saída <code>media</code> não usa acento.</p>
+<div class="secao"><h2 id="escopo">Escopo</h2></div>
+<p>As entradas são válidas e pertencem ao conjunto fictício conhecido. Validação de entradas externas é uma lacuna para discussão, não um requisito oculto. Não há banco de dados, autenticação real, API, dados pessoais ou persistência. A decisão de visibilidade é uma regra didática; não constitui um sistema de segurança pronto para uso.</p>
+<p>Todos os registros de <a href="chamados.json">chamados.json</a> são sintéticos. O contrato é a referência para comparar implementação, documentação e resultados dos testes.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

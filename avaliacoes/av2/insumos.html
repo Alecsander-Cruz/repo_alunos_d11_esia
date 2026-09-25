@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insumos de AV2 — proposta isolada de visibilidade · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>Insumos de AV2 — proposta isolada de visibilidade</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../../README.html">Índice</a>
+<a href="insumos.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>Origem:</strong> contrato e artefatos didáticos fictícios de Fila Clara. O candidato e o texto abaixo foram escritos para esta avaliação; não são resultados de consulta a modelo real. Sua tarefa é avaliar a proposta, sem presumir que ela esteja correta ou incorreta. <a href="README.html">Enunciado</a>.</p>
+<div class="secao"><h2 id="contrato-de-referencia">Contrato de referência</h2></div>
+<ul>
+<li><strong>R3:</strong> <code>pode_visualizar</code> permite acesso somente à pessoa do mesmo departamento do chamado, independentemente de estado ou prioridade.</li>
+<li><strong>R4:</strong> a documentação deve descrever o mesmo comportamento do contrato; código, teste e texto precisam ser confrontados com ele.</li>
+<li>Entradas são válidas. Os departamentos são Oficina e Laboratório; os estados são <code>aberto</code>, <code>em_andamento</code> e <code>fechado</code>; impacto e urgência são inteiros de 1 a 3. O contrato completo está em <a href="../../caso/regras.html">regras do caso</a>.</li>
+</ul>
+<p>Não há autenticação real, API, persistência ou dado pessoal no escopo. Não é necessário implementar validação de entradas externas.</p>
+<div class="secao"><h2 id="candidato-de-codigo">Candidato de código</h2></div>
+<pre><code class="language-python">def pode_visualizar_proposta(chamado, departamento):
+    return (
+        chamado[&quot;departamento&quot;] == departamento
+        and chamado[&quot;estado&quot;] != &quot;fechado&quot;
+    )
+</code></pre>
+<p>Este trecho é independente de <code>caso/fila_clara.py</code>. Se optar por executar, copie somente esta função e seus casos para um arquivo ou ambiente local separado. Python com biblioteca padrão basta; não altere o kit e não há dependência de rede.</p>
+<div class="secao"><h2 id="documentacao-candidata-texto-ficticio">Documentação candidata — texto fictício</h2></div>
+<blockquote>
+<p>A função permite que uma pessoa visualize chamados ativos de seu próprio departamento. Chamados abertos ou em andamento ficam disponíveis para o departamento correspondente; chamados fechados ficam indisponíveis. Chamados de outros departamentos não são exibidos. Impacto e urgência não alteram essa decisão.</p>
+</blockquote>
+<div class="secao"><h2 id="dados-disponiveis-para-construir-a-matriz">Dados disponíveis para construir a matriz</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>departamento</th>
+<th>estado</th>
+<th style="text-align: right;">impacto</th>
+<th style="text-align: right;">urgencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V-01</td>
+<td>Oficina</td>
+<td>aberto</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>V-02</td>
+<td>Oficina</td>
+<td>fechado</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>V-03</td>
+<td>Laboratório</td>
+<td>aberto</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>V-04</td>
+<td>Laboratório</td>
+<td>fechado</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Você pode usar o departamento solicitante <code>Oficina</code> nos quatro casos acima ou construir casos equivalentes com entradas válidas. Declare a escolha. Os dados permitem cruzar os dois eixos exigidos sem buscar informações externas. Casos adicionais são opcionais, dentro do mesmo tempo e limite de páginas.</p>
+<div class="secao"><h2 id="duas-vias-de-verificacao">Duas vias de verificação</h2></div>
+<p><strong>Por inspeção:</strong> avalie cada comparação do código, registre o retorno inferido e explique a combinação lógica. A saída esperada vem de R3. Preencha a matriz do template sem afirmar que executou.</p>
+<p><strong>Por execução opcional:</strong> construa cada dicionário com os campos fornecidos, invoque <code>pode_visualizar_proposta(chamado, "Oficina")</code> e registre o retorno. Inclua comando/ambiente e apenas o trecho essencial de saída no anexo. O retorno executado é observado; a previsão anterior e a análise da documentação continuam identificadas separadamente.</p>
+<p>As duas vias usam a mesma rubrica. Não são fornecidos resultados prontos de referência ou uma decisão de aceite: a comparação e o parecer fazem parte da avaliação.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

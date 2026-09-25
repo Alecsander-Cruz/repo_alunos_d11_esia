@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B3 — Execução acompanhada de uma verificação · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>B3 — Execução acompanhada de uma verificação</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../README.html">Índice</a>
+<a href="execucao-acompanhada-b3.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>26/09/2026 · 15h05–15h30 · 25min dentro da aula.</strong> Registro pessoal formativo, sem entrega e sem nota. O professor orienta a turma; cada estudante opera no próprio editor, navegador ou terminal. Instalação e conta não são necessárias.</p>
+<div class="secao"><h2 id="objetivo-e-insumos">Objetivo e insumos</h2></div>
+<p>Ligar requisito, resultado e mecanismo de uma verificação de <strong>R1</strong>, antes de aplicar o método a outro requisito na AV1.3. Abrir o <a href="../caso/regras.html">contrato</a>, a função <code>prioridade</code> no <a href="../caso/fila_clara.py">código didático</a> e este roteiro. As entradas são fictícias: impacto = 2 e urgência = 3.</p>
+<div class="secao"><h2 id="passos-e-registro-5-8-7-5-minutos">Passos e registro — 5 + 8 + 7 + 5 minutos</h2></div>
+<ol>
+<li><strong>15h05–15h10 — Preparar e prever (5min).</strong> Abrir um registro no próprio ambiente. Ler R1 e calcular a saída esperada antes de examinar o retorno do código.</li>
+<li><strong>15h10–15h18 — Operar (8min).</strong> Escolher um dos caminhos abaixo e preencher a tabela. O professor acompanha dúvidas de procedimento.</li>
+<li><strong>15h18–15h25 — Comparar e explicar (7min).</strong> Comparar seu registro com o trecho R1 da <a href="resultado-textual.html">transcrição fornecida</a>, após a orientação do professor. Localizar o ramo lógico que explica o resultado. Identificar o que foi observado, inferido ou apenas lido na transcrição.</li>
+<li><strong>15h25–15h30 — Rever a decisão (5min).</strong> Registrar uma intervenção necessária e um limite da verificação. Guardar o registro pessoal; não enviar como avaliação ou realizar tarefa extra depois da aula.</li>
+</ol>
+<p><strong>Caminho A — Python já disponível.</strong> Na raiz do kit, executar somente a verificação de R1 abaixo; não é necessário alterar o código nem instalar dependências:</p>
+<pre><code class="language-text">python -B testes/test_fila_clara.py --codigo caso/fila_clara.py --teste TestFilaClara.test_prioridade_alta_no_limiar_cinco
+</code></pre>
+<p>O material contém divergências intencionais. Registrar a saída real e seu significado; não confundir falha do caso com problema no seu desempenho. Ver <a href="../testes/README.html">instruções de execução</a>.</p>
+<p><strong>Caminho B — Inspeção no editor ou navegador.</strong> Ler somente <code>prioridade</code>, substituir os valores fornecidos e acompanhar as condições na ordem em que aparecem. Registrar qual ramo é percorrido e o retorno inferido. Esse caminho também exercita a verificação; uma inferência não deve ser apresentada como execução de Python.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Meu registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada e escore</td>
+<td></td>
+</tr>
+<tr>
+<td>Esperado pelo contrato R1</td>
+<td></td>
+</tr>
+<tr>
+<td>Resultado observado ou inferido</td>
+<td></td>
+</tr>
+<tr>
+<td>Condição/ramo que explica o resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>Modalidade: execução própria, inspeção ou transcrição</td>
+<td></td>
+</tr>
+<tr>
+<td>Intervenção necessária</td>
+<td></td>
+</tr>
+<tr>
+<td>O que esta verificação não demonstra</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>A comparação final é conduzida pelo professor. O registro não atribui nota nem comprova qualidade geral, produtividade de IA ou correção já executada. A AV1.3 continua com seu próprio enunciado sobre R2 e os mesmos 35min, das 16h15 às 16h50.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

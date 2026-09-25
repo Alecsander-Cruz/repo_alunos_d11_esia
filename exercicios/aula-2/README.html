@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AV1.2 — Verificar respostas e o alcance de uma alegação · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>AV1.2 — Verificar respostas e o alcance de uma alegação</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../../README.html">Índice</a>
+<a href="README.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>Individual — 35min — B2, 26/09/2026, 11h15–11h50 (Brasília).</strong> Integra AV1, que vale 20% pela média simples dos desafios dos blocos com presença. <a href="../../avaliacao.html">Avaliação e rubrica pública</a>.</p>
+<div class="secao"><h2 id="objetivo">Objetivo</h2></div>
+<p>Quero formular critérios de verificação, aplicá-los a duas respostas e decidir o que cada evidência permite concluir sobre correção e repetição.</p>
+<div class="secao"><h2 id="contexto-e-insumos">Contexto e insumos</h2></div>
+<p>A equipe Fila Clara recebeu duas respostas para revisão. <strong>As respostas A e B são simulações didáticas novas, escritas para esta avaliação. Não resultam de consultas reais a um modelo.</strong> Não há medição disponível de tokens, custo, latência, configuração ou versão do modelo.</p>
+<p><strong>Contrato R1:</strong> impacto e urgência são inteiros de 1 a 3. Some os dois: escore ≥ 5 dá <code>alta</code>; escore de 3 a 4 dá <code>media</code>; escore &lt; 3 dá <code>baixa</code>. <a href="../../caso/regras.html">Contrato completo</a>.</p>
+<p>Primeiro registre seu critério de correção e o tipo de evidência necessário para sustentar uma afirmação geral sobre comportamento. Depois examine as respostas.</p>
+<blockquote>
+<p><strong>Resposta A — simulada.</strong> “Para priorizar, basta considerar impacto: 1 corresponde a baixa, 2 a media e 3 a alta. Portanto, (impacto=2, urgencia=3) é media e (impacto=3, urgencia=1) é alta.”</p>
+<p><strong>Resposta B — simulada.</strong> “Repeti três vezes o pedido ‘classifique impacto=2, urgencia=3’. As três saídas foram ‘alta’. Isso prova que o modelo é determinístico e sempre entrega a classificação correta, inclusive em outros chamados.”</p>
+</blockquote>
+<p>Os três resultados de B são parte da narrativa simulada, e não execuções observadas por você. Use o <a href="template-registro.html">template individual</a>.</p>
+<div class="secao"><h2 id="passos-35min">Passos — 35min</h2></div>
+<ol>
+<li><strong>Ler — 5min.</strong> Leia R1 e registre os critérios antes de avaliar os textos A e B.</li>
+<li><strong>Produzir individualmente — 20min.</strong> Verifique os dois pares apresentados em A: registre esperado por R1, resposta e conclusão. Analise separadamente em B a classificação daquele par e a alegação geral. Aponte um contraexemplo ou uma condição que a evidência fornecida não cobre. Decida aceitar, aceitar parcialmente ou rejeitar cada resposta para uso pela equipe; proponha uma alternativa de verificação. Diferencie cálculo/inspeção, narrativa simulada e execução real.</li>
+<li><strong>Revisar pela rubrica — 5min.</strong> Confira se as conclusões têm o mesmo alcance das evidências e se informação não disponível foi marcada como tal.</li>
+<li><strong>Entregar — 5min.</strong> Envie um registro individual de até uma página pelo canal a ser informado pelo professor.</li>
+</ol>
+<div class="secao"><h2 id="entrega-e-checklist">Entrega e checklist</h2></div>
+<ul>
+<li>[ ] Critérios prévios e tabela dos dois pares de A, com cálculo essencial.</li>
+<li>[ ] Análise de B distinguindo o resultado particular e a alegação geral.</li>
+<li>[ ] Decisão sobre A e B, alternativa de verificação e limite concreto.</li>
+<li>[ ] Origem simulada declarada; nenhuma medida inventada de modelo real.</li>
+</ul>
+<p><strong>Critério de conclusão:</strong> outra pessoa consegue refazer os cálculos e identificar qual trecho de cada resposta sustenta sua decisão.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Critério AV1</th>
+<th style="text-align: right;">Peso</th>
+<th>Indicadores deste desafio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicação/decisão</td>
+<td style="text-align: right;">30%</td>
+<td>Critérios aplicados e decisões separadas sobre classificação e alegações.</td>
+</tr>
+<tr>
+<td>Evidência</td>
+<td style="text-align: right;">40%</td>
+<td>R1, dois pares, cálculos e trechos de A/B localizados; origem e status claros.</td>
+</tr>
+<tr>
+<td>Limites/alternativa</td>
+<td style="text-align: right;">30%</td>
+<td>Contraexemplo ou condição não coberta; alternativa de verificação proporcional, sem generalização indevida.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dica:</strong> verifique tanto a resposta quanto a extensão da afirmação feita a partir dela. Texto é suficiente; não é necessário executar modelo, abrir conta, usar API, Git ou fazer apresentação. Declare eventual uso de IA e não inclua dados reais.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

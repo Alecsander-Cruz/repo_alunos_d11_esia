@@ -1,0 +1,8 @@
+[
+  {"id": "FC-001", "departamento": "Oficina", "estado": "aberto", "impacto": 1, "urgencia": 1},
+  {"id": "FC-002", "departamento": "Laboratório", "estado": "em_andamento", "impacto": 2, "urgencia": 3},
+  {"id": "FC-003", "departamento": "Oficina", "estado": "fechado", "impacto": 3, "urgencia": 3},
+  {"id": "FC-004", "departamento": "Laboratório", "estado": "aberto", "impacto": 2, "urgencia": 2},
+  {"id": "FC-005", "departamento": "Oficina", "estado": "em_andamento", "impacto": 1, "urgencia": 2},
+  {"id": "FC-006", "departamento": "Laboratório", "estado": "fechado", "impacto": 3, "urgencia": 1}
+]

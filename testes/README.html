@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verificações do caso · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>Verificações do caso</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../README.html">Índice</a>
+<a href="README.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p>As nove verificações usam <code>unittest</code> e a biblioteca padrão do Python <strong>3.13.3</strong>. Execute os comandos a partir da raiz do pacote, onde está o <code>README.md</code> principal.</p>
+<pre><code class="language-text">python -B testes/test_fila_clara.py --codigo caso/fila_clara.py
+</code></pre>
+<p><code>--codigo</code> recebe o caminho do arquivo Python a verificar. Pode apontar para uma cópia de trabalho; quando omitido, usa <code>caso/fila_clara.py</code>. A opção <code>-B</code> evita arquivos auxiliares de cache.</p>
+<p>Para selecionar uma verificação pelo nome de comportamento:</p>
+<pre><code class="language-text">python -B testes/test_fila_clara.py --codigo caso/fila_clara.py --teste TestFilaClara.test_prioridade_alta_no_limiar_cinco
+</code></pre>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Regra</th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>As nove combinações válidas de impacto e urgência, organizadas em três testes</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Inclusão de chamados em andamento, exclusão dos fechados e ordem de entrada dos abertos</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Visibilidade no mesmo departamento e bloqueio entre departamentos em diferentes escores</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Revisão humana da coerência entre documentação, contrato e evidências; não é automatizada por esta suíte</td>
+</tr>
+</tbody>
+</table></div>
+<p>No material inicial, seis testes passam e três falham. <code>ok</code> indica verificação satisfeita; <code>FAIL</code> indica divergência da expectativa e <code>ERROR</code> indica impedimento para executar a verificação. O processo retorna <code>0</code> quando o conjunto executado passa e <code>1</code> se há falha ou erro.</p>
+<p>A saída é evidência sobre este material, não nota de aluno. Sucesso nos testes não demonstra segurança completa, qualidade geral ou produtividade da IA. Não se verifica comportamento de um modelo de linguagem. A transcrição acessível está em <a href="../apoio/resultado-textual.html">resultado-textual.md</a>.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D1.1 — Engenharia de Software na Era da IA Generativa · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>D1.1 — Engenharia de Software na Era da IA Generativa</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="README.html">Índice</a>
+<a href="ementa.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p>Plano de ensino da turma · CESAR School · Turma 2026.2 · Revisão pedagógica: demonstrações docentes e avaliações individuais.
+Escopo deste documento: disciplina D1.1, de 24h, integrante do módulo institucional M1, de 72h. Os canais de aula, envio e acompanhamento de acessibilidade serão comunicados pela organização.</p>
+<div class="secao"><h2 id="1-ficha-tecnica-do-modulo">1. Ficha técnica do módulo</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curso</td>
+<td>Pós-Graduação Lato Sensu em Engenharia de Software e IA — CESAR School</td>
+</tr>
+<tr>
+<td>Escopo</td>
+<td>D1.1 — Engenharia de Software na Era da IA Generativa, 24h; integra M1 institucional, de 72h</td>
+</tr>
+<tr>
+<td>Professor/turma</td>
+<td>Victor Freire · 2026.2</td>
+</tr>
+<tr>
+<td>Carga</td>
+<td>18h ao vivo (seis blocos de 180min) + 6h autônomas; hora de 60min</td>
+</tr>
+<tr>
+<td>Método</td>
+<td>Demonstração docente comentada, discussão orientada e avaliações individuais de aplicação</td>
+</tr>
+<tr>
+<td>B1/B2/B3</td>
+<td>25/09/2026, 19–22h; 26/09/2026, 9–12h e 14–17h</td>
+</tr>
+<tr>
+<td>B4/B5/B6</td>
+<td>02/10/2026, 19–22h; 03/10/2026, 9–12h e 14–17h</td>
+</tr>
+<tr>
+<td>Público</td>
+<td>42 profissionais de software, familiaridade heterogênea com IA; remoto ao vivo; apoio de Libras a confirmar</td>
+</tr>
+<tr>
+<td>Pré-requisitos</td>
+<td>Leitura de código e noções de requisitos/testes; instalação local não é condição de avaliação</td>
+</tr>
+<tr>
+<td>Ferramentas</td>
+<td>Python e biblioteca padrão para demonstrações do caso; runtime de preparação 3.13.3; assistente no navegador intercambiável</td>
+</tr>
+<tr>
+<td>Alternativa de acesso</td>
+<td>Inspeção textual, saídas simuladas identificadas e transcrição de execução; sem API paga obrigatória</td>
+</tr>
+<tr>
+<td>Normas institucionais</td>
+<td>Limite de falta de 25%, gravação após 48h por 90 dias sem gerar presença e abono somente pela Secretaria; recuperação, atraso e lançamento ainda aguardam confirmação</td>
+</tr>
+</tbody>
+</table></div>
+<p>Horários de Brasília. Almoço 12–14h, fora da carga; encerramento dos sábados às 17h. Datas confirmadas no calendário da turma.</p>
+<p>Ementa de referência: impactos da IA generativa na engenharia de software; fundamentos operacionais de LLM; papel e responsabilidade do engenheiro; aplicações no ciclo de desenvolvimento; qualidade, verificação e revisão; riscos e uso corporativo; maturidade e adoção.</p>
+<div class="secao"><h2 id="2-contexto-a-trilha-completa-do-curso">2. Contexto: a trilha completa do curso</h2></div>
+<p>O curso tem 360h em cinco módulos de 72h. A progressão institucional é M1: fundamentos e desenvolvimento → M2: arquitetura e integração → M3: agentes e automação → M4: avaliação, segurança e operação → M5: produto e projeto aplicado. A disciplina inaugura o curso: pode pressupor experiência com software, mas não vocabulário comum de processo e de IA. Por isso B1 começa por um nivelamento com definições, antes da primeira demonstração.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Disciplina de M1</th>
+<th style="text-align: right;">Carga</th>
+<th>Contribuição e fronteira</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1.1 — Engenharia de Software na Era da IA Generativa</td>
+<td style="text-align: right;">24h</td>
+<td>Decidir quando usar IA, verificar saídas, reconhecer riscos e sustentar decisões com evidência</td>
+</tr>
+<tr>
+<td>D1.2 — Desenvolvimento Assistido por IA</td>
+<td style="text-align: right;">24h</td>
+<td>Desenvolver fluência operacional no editor e com agente de codificação; recebe critérios de delegação e revisão de D1.1</td>
+</tr>
+<tr>
+<td>D1.3 — Prompting Técnico, Especificação e Contexto</td>
+<td style="text-align: right;">24h</td>
+<td>Aprofundar especificação verificável, critérios de aceite e organização/comparação de contexto</td>
+</tr>
+</tbody>
+</table></div>
+<p>O salto de D1.1 é passar de impressões sobre uma ferramenta para decisões justificadas. A implementação de agentes, subagentes, hooks e MCP pertence às disciplinas posteriores e não compõe as competências ou avaliações desta disciplina.</p>
+<div class="secao"><h2 id="3-filosofia-pedagogica-do-modulo">3. Filosofia pedagógica do módulo</h2></div>
+<p><strong>Nivelar antes de engatar.</strong> Parte da turma já atua no mercado e parte chega direto da graduação. B1 dedica 59min a definições de processo de software, verificação e validação, IA, aprendizado de máquina e funcionamento de LLMs, com um fluxograma por conceito, e só depois aplica essa base a uma decisão de delegação. Os blocos seguintes retomam essas definições e indicam leitura de apoio para estudo fora de sala.</p>
+<p><strong>Demonstração que torna o raciocínio observável.</strong> O professor formula a tarefa, define critério, faz uma previsão, opera a ferramenta, confronta a saída e revê a decisão. A aula mostra também incerteza, limite e alternativa, em vez de apenas uma execução bem-sucedida. B1 reserva 35min a esse processo, depois do nivelamento; os demais blocos, 75min. Em B3, um ato de 25min é execução acompanhada dos estudantes, dentro dos mesmos 75min, mantendo 50min de demonstração docente.</p>
+<p><strong>Avaliação individual de transferência.</strong> Após a demonstração e a discussão, o estudante aplica os conceitos a um insumo diferente durante 35min. O desempenho aparece em decisão, evidência e argumento próprios. Não há nota por presença, repetição da solução ou participação oral; não há entrega coletiva obrigatória.</p>
+<p><strong>Exigência de pós-graduação.</strong> Analisar, avaliar e propor são ações centrais: comparar alternativas sob restrições, formular verificação independente, examinar contraprova e integrar literatura à recomendação final. AV3 reutiliza duas referências de L0, com localização e análise de limites.</p>
+<p><strong>Autonomia proporcional à consequência.</strong> Revisão técnica acompanha a produção; autorização humana é explicitada antes de ação com consequência grave. Decisão acadêmica não depende de uma ferramenta específica. O caso usa dados fictícios, sem material do empregador.</p>
+<p><strong>Equidade e carga verificável.</strong> Materiais acessíveis antecipados, instruções escritas e micropausas de fala; resposta escrita é evidência válida. A alternativa textual usa a mesma rubrica. L0, AV2 e AV3 somam 6h, sem pesquisa, defesa ou implementação extra obrigatória.</p>
+<div class="secao"><h2 id="4-tendencias-2026-pesquisa-aplicada">4. Tendências 2026 (pesquisa aplicada)</h2></div>
+<p>Os recortes abaixo são questões para análise dos tópicos da disciplina, sem afirmar novidades ou liderança de produtos em 2026 nem uma pesquisa externa atualizada de tendências. A bibliografia básica teve título, autoria e registro conferidos no diagnóstico, não uma revisão sistemática atualizada.</p>
+<h3 id="b1-mudanca-no-trabalho-e-evidencia">B1 — Mudança no trabalho e evidência</h3>
+<p>Qual parte de uma tarefa muda com assistência e qual responsabilidade permanece? Distinguir relato, demonstração e evidência de produtividade; não converter uma experiência em alegação causal geral.</p>
+<h3 id="b2-limites-operacionais">B2 — Limites operacionais</h3>
+<p>Como contexto, informação ausente, variabilidade, custo e latência afetam uma decisão? Três repetições por condição servem à observação exploratória; resultados iguais também são válidos. Execução local não implica custo zero, determinismo ou latência menor.</p>
+<h3 id="b3-assistencia-ao-longo-do-ciclo">B3 — Assistência ao longo do ciclo</h3>
+<p>Onde há benefício, retrabalho e intervenção humana em requisitos, testes e documentação? A análise observa o fluxo e suas dependências, preservando o aprofundamento operacional para D1.2.</p>
+<h3 id="b4-verificacao-independente">B4 — Verificação independente</h3>
+<p>Como distinguir um artefato convincente de um correto? Relacionar requisito, contraexemplo e evidência; discutir dívida técnica, autoria e formação de profissionais iniciantes sem tomar a autoconfiança da ferramenta como validação.</p>
+<h3 id="b5-governanca-observavel">B5 — Governança observável</h3>
+<p>Que dados podem entrar, quem decide e como se verifica uma regra? Retenção, permissões, segurança, licenciamento e portabilidade são perguntas para consulta às políticas e condições aplicáveis, sem conclusão jurídica presumida.</p>
+<h3 id="b6-adocao-e-maturidade">B6 — Adoção e maturidade</h3>
+<p>Que evidência diferencia exploração, protótipo, piloto e uso sustentado? Definir próximo passo, condição de interrupção e métrica antes de recomendar expansão.</p>
+<div class="secao"><h2 id="5-conceitos-base-da-ferramenta-base-glossario-operacional">5. Conceitos-base da ferramenta base (glossário operacional)</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>O que é</th>
+<th>Onde aparece</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modelo</td>
+<td>Componente que produz respostas a partir da entrada</td>
+<td>Identificação exposta pela interface, quando disponível</td>
+<td>Registrar qual componente foi usado, sem confundi-lo com o aplicativo</td>
+</tr>
+<tr>
+<td>Produto/interface</td>
+<td>Aplicação que reúne modelo e recursos de interação</td>
+<td>Navegador e tela de conversa</td>
+<td>Descrever o ambiente e seus limites observáveis</td>
+</tr>
+<tr>
+<td>Sessão/contexto</td>
+<td>Informações fornecidas e histórico disponíveis naquela interação</td>
+<td>Conversa, anexos autorizados e instruções</td>
+<td>Controlar o que foi mantido ou alterado entre tentativas</td>
+</tr>
+<tr>
+<td>Token/janela de contexto</td>
+<td>Unidade de processamento e limite de informação do modelo</td>
+<td>Documentação ou medição disponível</td>
+<td>Explicar limites; marcar como não disponível quando a interface não os expõe</td>
+</tr>
+<tr>
+<td>Variabilidade</td>
+<td>Possibilidade de resultados distintos sob entradas aparentemente iguais</td>
+<td>Comparação de execuções</td>
+<td>Planejar observação e verificação; não exigir diferença artificial</td>
+</tr>
+<tr>
+<td>Alucinação</td>
+<td>Conteúdo afirmado sem suporte suficiente ou incorreto</td>
+<td>Resposta, justificativa, referência ou código</td>
+<td>Separar alegação da evidência usada para aceitá-la</td>
+</tr>
+<tr>
+<td>Critério de aceite</td>
+<td>Condição verificável para aceitar um resultado</td>
+<td>Enunciado, requisito e registro de revisão</td>
+<td>Definir o esperado antes de examinar a resposta</td>
+</tr>
+<tr>
+<td>Teste independente</td>
+<td>Checagem fundada no requisito, além do artefato avaliado</td>
+<td>Teste, caso de fronteira ou inspeção documentada</td>
+<td>Verificar código, documentação e afirmações</td>
+</tr>
+<tr>
+<td>Runtime Python</td>
+<td>Ambiente que executa o código didático</td>
+<td>Terminal; referência de preparação 3.13.3</td>
+<td>Reproduzir B3/B4; não é versão de modelo de IA</td>
+</tr>
+<tr>
+<td>Evidência/limite</td>
+<td>Registro observável e alcance da conclusão</td>
+<td>Portfólio individual</td>
+<td>Sustentar decisão sem extrapolar a atividade</td>
+</tr>
+<tr>
+<td>Saída didática simulada</td>
+<td>Texto construído para análise, identificado como simulação</td>
+<td>Pacote de contingência offline</td>
+<td>Assegurar participação sem conta, cota ou execução; não serve como medição real de modelo</td>
+</tr>
+</tbody>
+</table></div>
+<div class="secao"><h2 id="6-pre-requisitos-e-setup">6. Pré-requisitos e setup</h2></div>
+<ul>
+<li>A organização comunicará sala, ambiente da turma, canal de entrega e acompanhamento de acessibilidade quando confirmados.</li>
+<li>Disponibilizar previamente enunciados textuais, glossário, código fictício e pacote de contingência; usar fonte legível e descrever o conteúdo exibido.</li>
+<li>Selecionar interface no navegador apenas se houver acesso gratuito disponível e permitido na data da aula. Não pressupor licença de turma, API, conta ou cota; validar antes do encontro.</li>
+<li>Para execução local em B3/B4, preparar Python 3.13.3 e biblioteca padrão; o aluno sem instalação acompanha o mesmo código e analisa resultados fornecidos, com origem identificada.</li>
+<li>Não exigir download de LLM local, chave de API, pagamento ou dados do empregador para atingir os objetivos.</li>
+</ul>
+<p><strong>Smoke test de preparação:</strong> abrir o material; registrar a versão de Python com <code>python --version</code> se o caminho local for usado; abrir uma sessão de IA e pedir a reformulação de um requisito fictício; salvar entrada, saída e identificação exposta. Se não houver acesso, abrir a saída simulada correspondente e registrar a modalidade. No kit de B3/B4, o procedimento de execução está documentado em testes/README.md: nove verificações, com seis sucessos e três falhas intencionais no material inicial. A transcrição em apoio/resultado-textual.md registra a execução de preparação.</p>
+<p><strong>Contingência equivalente:</strong> o pacote textual deve conter todos os insumos, respostas simuladas rotuladas e transcrições verificadas de execução do código. Quem o utiliza analisa critérios, limites e decisões com a mesma rubrica; não declara ter feito chamadas ou medições que não executou. No B2, discute como desenharia o experimento e compara exemplos, identificando a limitação.</p>
+<div class="secao"><h2 id="7-mapa-de-competencias-e-outputs-do-modulo">7. Mapa de competências e outputs do módulo</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th>Desempenho esperado</th>
+<th>Instrumentos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O1 — Mudanças e permanências</td>
+<td>Distinguir produção de artefato de responsabilidade e comparar alternativa sem IA</td>
+<td>AV1.1, AV3</td>
+</tr>
+<tr>
+<td>O2 — Capacidades e limites operacionais</td>
+<td>Relacionar contexto, variabilidade e informação ausente à confiança na decisão</td>
+<td>AV1.2, AV2, AV3</td>
+</tr>
+<tr>
+<td>O3 — Ciclo e autonomia</td>
+<td>Delimitar etapa assistida, responsabilidade e condição de aceite</td>
+<td>AV1.1/3, AV2, AV3</td>
+</tr>
+<tr>
+<td>O4 — Verificação e responsabilidade</td>
+<td>Formular critério independente, localizar evidência e sustentar revisão</td>
+<td>AV1.2/3/4, AV2, AV3</td>
+</tr>
+<tr>
+<td>O5 — Riscos e mecanismos</td>
+<td>Formular controles proporcionais, responsáveis e evidência de funcionamento</td>
+<td>AV1.5, AV3</td>
+</tr>
+<tr>
+<td>O6 — Maturidade e adoção</td>
+<td>Classificar iniciativa por fatos e propor avanço/interrupção verificáveis</td>
+<td>AV1.6, AV3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fluência em Python ou fornecedor específico não é competência avaliada. A precisão do argumento e a capacidade de auditar sua evidência determinam o nível da rubrica.</p>
+<div class="secao"><h2 id="8-plano-de-aulas-detalhado">8. Plano de aulas detalhado</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th style="text-align: right;">B1</th>
+<th style="text-align: right;">B2–B6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abertura/retomada; em B1, quebra-gelo e contrato</td>
+<td style="text-align: right;">26min</td>
+<td style="text-align: right;">10min</td>
+</tr>
+<tr>
+<td>Fundamentos aplicados; em B1, nivelamento</td>
+<td style="text-align: right;">59min</td>
+<td style="text-align: right;">30min</td>
+</tr>
+<tr>
+<td>Demonstração; em B3, execução acompanhada no ato 2</td>
+<td style="text-align: right;">35min</td>
+<td style="text-align: right;">75min</td>
+</tr>
+<tr>
+<td>Discussão orientada; em B1, com mapa de delegação</td>
+<td style="text-align: right;">15min</td>
+<td style="text-align: right;">20min</td>
+</tr>
+<tr>
+<td>Avaliação individual AV1</td>
+<td style="text-align: right;">35min</td>
+<td style="text-align: right;">35min</td>
+</tr>
+<tr>
+<td>Fechamento</td>
+<td style="text-align: right;">10min</td>
+<td style="text-align: right;">10min</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>180min</strong></td>
+<td style="text-align: right;"><strong>180min</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Dois atos de 15+20min em B1, com o mapa de delegação preenchido na discussão; três atos de 25+25+25min nos demais. Em B3, o segundo ato (15h05–15h30) é execução acompanhada: cada estudante verifica R1 no próprio ambiente por execução ou inspeção documentada, com registro pessoal sem entrega nem nota. São 385min de demonstração docente e 25min de execução acompanhada no conjunto da disciplina. AV1: leitura 5min, produção 20min, revisão 5min, entrega 5min. Discussão com 2–3 contribuições curtas e chat; sem salas simultâneas. Nenhuma atividade é contada duas vezes. Planos, roteiros e instruções dos slides detalham os mesmos intervalos.</p>
+<h3 id="b1-o-que-muda-na-engenharia-de-software">B1 — O que muda na engenharia de software</h3>
+<p><strong>25/09, 19–22h.</strong> Abertura com quebra-gelo de uma frase por pessoa (nome, de onde fala, se trabalha e com o quê) e contrato da disciplina. Nivelamento: processo de software e seus artefatos; verificação, validação e critério de aceite; IA, aprendizado de máquina e LLM; como um LLM gera texto; modelo, produto e ferramenta; IA no processo e limite de alegações de produtividade; delegação e responsabilidade. Demonstração: comparar documentação manual de R1 com saída solicitada pelo professor a um assistente, quando disponível, ou candidato simulado identificado. Discussão: o que a assistência muda e o que continua sob responsabilidade profissional, com o mapa de delegação preenchido pelo professor. <strong>AV1.1, 21h15–21h50:</strong> três cartões novos sobre R2, R3 e mudança em produção; mapa individual com decisão, alternativa, evidência e limite. Fechamento orienta o diagnóstico sem nota, a responder até 26/09, 8h, a L0 e a leitura de nivelamento, sem entrega.</p>
+<h3 id="b2-fundamentos-que-afetam-decisao-tecnica">B2 — Fundamentos que afetam decisão técnica</h3>
+<p><strong>26/09, 9–12h.</strong> Contexto, tokens/janela, variabilidade, informação ausente, alucinação, custo e latência. Demonstração: protocolo A/B, coleta real pelo professor quando houver acesso ou inspeção das seis saídas simuladas identificadas; critério anterior à coleta/leitura, comparação e limites da observação. Resultados reais e simulados são mantidos separados. Não inventar medições de modelo. <strong>AV1.2, 11h15–11h50:</strong> avaliar duas respostas novas, verificar uma classificação e uma inferência sobre determinismo. Registros iguais são válidos; nenhuma comparação curta comprova desempenho geral ou produtividade causal.</p>
+<h3 id="b3-ia-no-ciclo-de-desenvolvimento">B3 — IA no ciclo de desenvolvimento</h3>
+<p><strong>26/09, 14–17h.</strong> Requisitos, implementação, teste, revisão, documentação e leitura de legado. Demonstração: percorrer R1 por requisito, teste e documento; professor solicita sugestões ao assistente quando disponível, verifica e registra aceite, usando material simulado identificado como contingência. No ato 2, cada estudante verifica R1 no próprio ambiente durante 25min, por execução ou rastreamento textual, sem entrega ou nota adicional. <strong>AV1.3, 16h15–16h50:</strong> aplicar o percurso a R2, com três casos, ordem de entrada, documentação e decisão de autonomia. Fechamento orienta AV2, estudo técnico de 2h, com candidato distinto do exemplo de aula.</p>
+<h3 id="b4-qualidade-verificacao-e-responsabilidade">B4 — Qualidade, verificação e responsabilidade</h3>
+<p><strong>02/10, 19–22h.</strong> Plausibilidade versus correção, fronteiras, teste independente, dívida técnica e responsabilidade. Retomar padrões de AV1/AV2 por amostra disponível, sem presumir correção integral imediatamente após o prazo. Demonstração: revisar candidatos existentes de código/teste/documento, examinar falhas e corrigir em cópia com revalidação. <strong>AV1.4, 21h15–21h50:</strong> examinar proposta nova que ordena a listagem de ativos; parecer individual com critério, verificação, decisão, ajuste e revalidação.</p>
+<h3 id="b5-riscos-seguranca-e-uso-corporativo">B5 — Riscos, segurança e uso corporativo</h3>
+<p><strong>03/10, 9–12h.</strong> Dados, retenção, permissões, licenciamento e dependência de fornecedor como condições a verificar. Demonstração: construir política para tarefas fictícias e simular exceção, relacionando mecanismo e evidência. <strong>AV1.5, 11h15–11h50:</strong> decidir sobre pedido hipotético de uso de log interno sem condições de fornecedor confirmadas; alternativa viável e duas regras operáveis. Não exigir parecer jurídico nem dado real.</p>
+<h3 id="b6-maturidade-adocao-e-proximos-passos">B6 — Maturidade, adoção e próximos passos</h3>
+<p><strong>03/10, 14–17h.</strong> Exploração, protótipo, piloto e uso sustentado; estágio depende de evidência, não de intenção. Demonstração: classificar a iniciativa e desenhar próximo passo com métrica e condição de interrupção. <strong>AV1.6, 16h15–16h50:</strong> analisar novo cartão com piloto planejado, mas sem execução; comparar estágio alternativo e justificar decisão. Fechamento: diagnóstico sem nota 3min, AV3 5min, passagem para D1.2 2min. Encerrar às 17h.</p>
+<div class="secao"><h2 id="9-projeto-integrador-do-modulo">9. Projeto integrador do módulo</h2></div>
+<p>O caso transversal Fila Clara sustenta demonstrações e avaliações. O produto integrador é <strong>AV3, parecer individual fundamentado</strong>, apoiado nas evidências das avaliações e nas leituras, sem construir aplicação completa. O contrato R1–R4 define prioridade, estados ativos, acesso por departamento e documentação coerente.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Trabalho autônomo</th>
+<th style="text-align: right;">Carga</th>
+<th>Entrega</th>
+<th>Prazo proposto, Brasília</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0 — leitura orientada</td>
+<td style="text-align: right;">2h</td>
+<td>Fichamento até 400 palavras; dois textos, afirmações localizadas e limites</td>
+<td>02/10/2026, 18h59</td>
+</tr>
+<tr>
+<td>AV2 — estudo técnico</td>
+<td style="text-align: right;">2h</td>
+<td>Até duas páginas + até duas páginas de anexo; requisito, matriz de verificação, evidência e decisão</td>
+<td>30/09/2026, 23h59</td>
+</tr>
+<tr>
+<td>AV3 — parecer integrador</td>
+<td style="text-align: right;">2h</td>
+<td>Até três páginas + até duas páginas de evidências/referências; decisão, literatura, verificação, riscos e maturidade</td>
+<td>10/10/2026, 23h59</td>
+</tr>
+</tbody>
+</table></div>
+<p>AV2 usa candidato próprio de acesso e documentação, sem depender de conteúdo posterior a B3. AV3 aplica duas referências já lidas e reutiliza os registros, sem pesquisa extra. O <a href="avaliacoes/README.html">índice de avaliações</a> reúne enunciados e modelos; o <a href="estudo-autonomo.html">estudo autônomo</a> delimita esforço e procedência.</p>
+<div class="secao"><h2 id="10-avaliacao-e-rubricas">10. Avaliação e rubricas</h2></div>
+<p><strong>AV1 20% + AV2 30% + AV3 50%.</strong> AV1 é a média dos desafios dos blocos com presença registrada. Todas as notas estão entre 0 e 10. L0 é formativa e não acrescenta peso. Pesos e prazos são proposta docente; normas administrativas seguem a instituição.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Critérios internos, soma 100%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AV1, cada desafio</td>
+<td>Aplicação/decisão 30%; evidência 40%; limites/alternativa 30%</td>
+</tr>
+<tr>
+<td>AV2</td>
+<td>Recorte/requisito 15%; estratégia 25%; evidência/rastreabilidade 30%; decisão/alternativa 20%; procedência/limites 10%</td>
+</tr>
+<tr>
+<td>AV3</td>
+<td>Problema/alternativas 15%; autonomia/responsabilidade 15%; evidências 25%; riscos/mecanismos 20%; maturidade/próximo passo 15%; fundamentação/argumentação 10%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Níveis por critério: 0 ausente, 1 incipiente, 2 adequado, 3 consistente. Nota = 10 × soma(peso × nível/3); todos os níveis 2 produzem 6,67. As <a href="avaliacao.html">rubricas públicas completas</a> descrevem os níveis com comportamentos observáveis, fórmula, exemplo de cálculo, consulta, autoria, devolutiva e revisão de nota.</p>
+<p>IA é permitida com declaração e julgamento próprios. Avaliar aplicação a caso distinto, evidência localizada, comparação e limite; não aparência da resposta, frequência, câmera, quantidade de prompts ou testes verdes. Execução e inspeção textual são modalidades válidas; a origem do resultado deve estar clara. A avaliação é manual.</p>
+<h3 id="presenca-ausencia-e-calculo-de-av1">Presença, ausência e cálculo de AV1</h3>
+<p>Os seis desafios permanecem avaliativos. <strong>AV1 é a média simples das notas dos blocos com presença registrada, sem reposição de desafio por ausência.</strong> O bloco ausente fica fora da soma e do denominador; a falta permanece registrada para frequência. Com seis presenças, a média usa as seis notas; com cinco presenças, usa cinco. Exemplo: notas 8, 7, 9, 8 e 8 em cinco blocos com presença resultam em AV1 = 40 ÷ 5 = 8,0.</p>
+<p>Presença e entrega são registros distintos: o bloco com presença integra o denominador mesmo quando não há entrega. Sem evidência, os critérios correspondentes recebem nível 0. Uma barreira de acesso registrada segue o encaminhamento institucional antes da consolidação; não deve ser confundida com ausência ou falta de competência. Se não houver nenhum bloco com presença, não dividir por zero nem inventar uma média: registrar AV1 sem média calculável e encaminhar o lançamento à Secretaria. A regra de frequência permanece independente da nota.</p>
+<h3 id="devolutiva-de-av1">Devolutiva de AV1</h3>
+<p>O professor registra <strong>nível 0–3 e evidência curta por critério em todos os desafios dos blocos com presença</strong>. A devolutiva individual desenvolvida — uma força, uma lacuna e uma ação de melhoria — ocorre em <strong>AV1.3 e AV1.6</strong>. Nos demais desafios, a turma recebe devolutiva coletiva, sem identificação nominal, além dos níveis registrados individualmente. Se houver ausência em AV1.3 ou AV1.6, a devolutiva individual é transferida para outro desafio realizado, sem duplicá-lo, priorizando o mais recente daquele fim de semana; havendo dois desafios realizados, são duas devolutivas individuais. AV2 e AV3 mantêm devolutiva individual.</p>
+<p>Pedidos de revisão podem indicar critério e evidência de qualquer desafio, inclusive dos que tiveram devolutiva coletiva. A escolha do formato de feedback não altera os pesos nem os descritores das rubricas.</p>
+<h3 id="frequencia-gravacoes-e-abono">Frequência, gravações e abono</h3>
+<p>O limite institucional de falta é <strong>25% da carga de 24h (6h)</strong>. Acima desse limite, há reprovação por falta, independentemente da nota. A frequência segue o registro acadêmico institucional; excluir um bloco ausente da média de AV1 não abona a falta.</p>
+<p>As gravações são liberadas <strong>48h após a aula</strong>, ficam disponíveis por <strong>90 dias</strong> e servem apenas à revisão: assistir à gravação <strong>não gera presença</strong>. Abono de falta é atribuição exclusiva da <strong>Secretaria, mediante comprovante</strong>. Recuperação, prazos de lançamento e canais acadêmicos serão comunicados após confirmação institucional.</p>
+<div class="secao"><h2 id="11-repositorio-de-apoio">11. Repositório de apoio</h2></div>
+<p>O <a href="README.html">material do aluno</a> contém contrato, seis dados sintéticos, código, nove verificações, saídas simuladas, transcrição e dossiês de avaliação. As demonstrações usam o caso; AV1, AV2 e AV3 têm enunciados, entregáveis, modelos e critérios próprios.</p>
+<p>O material inicial contém três divergências funcionais intencionais e sua referência passa nas nove verificações. Elas apoiam demonstração e revisão; não obrigam todos os desafios a corrigir código. AV2 examina candidato isolado e AV1.4 apresenta outra proposta para análise, sem alterar a base do caso.</p>
+<p>A turma recebe o ZIP discente com este plano de ensino, os enunciados e os materiais do caso. As <a href="avaliacao.html">rubricas públicas</a> apresentam critérios, níveis e regras de cálculo.</p>
+<div class="secao"><h2 id="12-referencias-e-fontes">12. Referências e fontes</h2></div>
+<p><strong>Bibliografia básica:</strong> títulos, autoria e registros conferidos no diagnóstico; não se afirma leitura integral nem atualização sistemática para 2026.</p>
+<ul>
+<li>FAN, Angela et al. <em>Large Language Models for Software Engineering: Survey and Open Problems</em>. 2023. <a href="https://arxiv.org/abs/2310.03533v4">Registro e versão v4</a>.</li>
+<li>HOU, Xinyi et al. <em>Large Language Models for Software Engineering: A Systematic Literature Review</em>. Submissão de 2023; <a href="https://arxiv.org/abs/2308.10620v6">versão v6 de 2024</a>.</li>
+<li>NGUYEN-DUC, Anh et al. <em>Generative Artificial Intelligence for Software Engineering — A Research Agenda</em>. 2023. <a href="https://arxiv.org/abs/2310.18648v1">Registro e versão v1</a>.</li>
+</ul>
+<p><strong>Referência operacional:</strong> <a href="https://docs.python.org/3.13/">documentação oficial do Python 3.13</a>, para a biblioteca padrão do caso. O número 3.13.3 é o runtime local de referência, não garantia de reprodução de saídas de IA. A documentação da interface de IA deve ser conferida quando o professor escolher o serviço; nenhum fornecedor integra o contrato pedagógico.</p>
+<div class="secao"><h2 id="13-apendices-templates-e-checklists">13. Apêndices: templates e checklists</h2></div>
+<p><strong>Registro de avaliação:</strong> identificação acadêmica; instrumento; insumo/versão; critério; método; entrada; esperado; encontrado; decisão; alternativa; limite; procedência e assistência. Somente os campos pertinentes ao enunciado precisam ser preenchidos; não exigir execução onde o objetivo é decisão organizacional.</p>
+<p><strong>AV1:</strong> um registro individual até uma página por bloco. <strong>AV2:</strong> requisito → matriz de quatro casos → código/documento → verificação → decisão/alternativa → revalidação. <strong>AV3:</strong> problema/alternativas → autonomia → evidência/contraponto → dois riscos/controles → estágio/próximo passo → fundamentação em duas referências.</p>
+<p><strong>Checklist do estudante:</strong> usar apenas insumos autorizados; aplicar ao caso; identificar fonte e método; separar esperado e encontrado; não atribuir execução à inspeção; justificar decisão; examinar limite/alternativa; declarar assistência; revisar pela rubrica e entregar no canal institucional.</p>
+<p><strong>Ficha docente de correção:</strong> critério | peso | nível 0–3 | evidência localizada | comentário. A AV1 não tem reposição por ausência. Recuperação, atrasos e prazo de lançamento dependem das regras acadêmicas ainda a confirmar.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

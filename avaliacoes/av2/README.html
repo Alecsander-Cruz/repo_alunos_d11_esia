@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AV2 — Estudo técnico de verificação · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>AV2 — Estudo técnico de verificação</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../../README.html">Índice</a>
+<a href="README.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>Individual · 30% da nota · 2h autônomas após B3.</strong> Prazo proposto: <strong>30/09/2026, 23h59, Brasília</strong>. Entrega: <strong>até duas páginas de análise + até duas páginas de anexo técnico</strong>. Canal acadêmico a ser informado pelo professor. <a href="../../avaliacao.html">Avaliação e rubrica pública completa</a>.</p>
+<div class="secao"><h2 id="objetivo">Objetivo</h2></div>
+<p>Quero verificar uma proposta de visibilidade contra um requisito aprovado, produzir evidência rastreável e decidir seu encaminhamento comparando uma alternativa.</p>
+<div class="secao"><h2 id="contexto-e-insumos">Contexto e insumos</h2></div>
+<p>A manutenção de Fila Clara recebeu um candidato de código e uma documentação para revisão. Os <a href="insumos.html">insumos de AV2</a> fornecem o contrato, a proposta isolada, a documentação fictícia e dados suficientes para a análise. Todos são didáticos; não representam saída observada de um modelo real. O candidato é objeto de avaliação e não substitui as funções do repositório.</p>
+<p>Use o <a href="template-entrega.html">template de entrega</a>. Você pode executar o candidato em uma cópia isolada ou inspecioná-lo por tabela. As duas vias permitem atingir todos os níveis da mesma rubrica; a qualidade da análise define a nota.</p>
+<div class="secao"><h2 id="trabalho-e-tempo-120min">Trabalho e tempo — 120min</h2></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th style="text-align: right;">Tempo</th>
+<th>Ação e produto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recorte e critério</td>
+<td style="text-align: right;">20min</td>
+<td>Leia R3/R4; delimite a tarefa, escreva o critério de aceite antes de avaliar o candidato e formule a matriz.</td>
+</tr>
+<tr>
+<td>Verificação</td>
+<td style="text-align: right;">60min</td>
+<td>Analise no mínimo quatro casos cruzando departamento igual/diferente e estado aberto/fechado; confronte esperado, comportamento do código e texto da documentação; investigue uma alternativa.</td>
+</tr>
+<tr>
+<td>Registro e revisão</td>
+<td style="text-align: right;">40min</td>
+<td>Escreva a análise, selecione trechos essenciais para o anexo, aplique a rubrica e finalize a entrega.</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li><strong>Defina o recorte.</strong> Identifique função, usuário do resultado, entradas válidas e requisito que governa a decisão. Não acrescente requisitos de autenticação, persistência ou validação de dados externos.</li>
+<li><strong>Formule a matriz.</strong> Inclua ao menos as quatro combinações: mesmo departamento/aberto; mesmo departamento/fechado; departamento diferente/aberto; departamento diferente/fechado. Escolha valores válidos de impacto e urgência. Registre o esperado por R3 antes de comparar com a proposta.</li>
+<li><strong>Verifique.</strong> Em cada linha, registre entrada completa ou referência aos dados, esperado, retorno do candidato e status <strong>observado em execução</strong> ou <strong>inferido por inspeção</strong>. Explique o caminho lógico de ao menos um caso decisivo e um caso de controle. Confronte a documentação com R3 e com o código, localizando o trecho relevante.</li>
+<li><strong>Decida e compare.</strong> Emita aceite, aceite condicionado ou rejeição para código e documentação. Compare com uma alternativa de encaminhamento ou de implementação/documentação; se propuser ajuste, diga o que muda e reaplique os casos, em tabela ou execução. Identifique responsável pelo aceite e condição para rever sua decisão.</li>
+<li><strong>Delimite.</strong> Declare origem, método, uso de IA e o que as verificações não demonstram. Planejar um teste não equivale a executá-lo. Não conclua sobre segurança de um sistema real ou produtividade de IA a partir desta análise.</li>
+</ol>
+<div class="secao"><h2 id="conteudo-da-entrega">Conteúdo da entrega</h2></div>
+<p><strong>Análise — até duas páginas:</strong> requisito e critério; estratégia; principais achados com ponteiros para a matriz e trechos; decisão comparada, responsável e limite. <strong>Anexo — até duas páginas:</strong> matriz completa, trechos essenciais de código/documentação e eventual comando/saída. Evite logs extensos ou transcrições integrais de conversa.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Critério</th>
+<th style="text-align: right;">Peso</th>
+<th>O que deve estar examinável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recorte e requisito</td>
+<td style="text-align: right;">15%</td>
+<td>Tarefa, contrato R3/R4, escopo e critério prévio.</td>
+</tr>
+<tr>
+<td>Estratégia de verificação</td>
+<td style="text-align: right;">25%</td>
+<td>Quatro combinações e justificativa da cobertura; casos decisivo e de controle.</td>
+</tr>
+<tr>
+<td>Evidência e rastreabilidade</td>
+<td style="text-align: right;">30%</td>
+<td>Entradas, esperado, retorno, trechos e status suficientes para repetir ou auditar a análise.</td>
+</tr>
+<tr>
+<td>Decisão e alternativa</td>
+<td style="text-align: right;">20%</td>
+<td>Encaminhamento coerente, comparação e verificação da alternativa proposta.</td>
+</tr>
+<tr>
+<td>Procedência e limites</td>
+<td style="text-align: right;">10%</td>
+<td>Origem e eventual IA declaradas; inferência separada de execução; limite com efeito na decisão.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="secao"><h2 id="checklist-de-entrega">Checklist de entrega</h2></div>
+<ul>
+<li>[ ] Até duas páginas de análise + até duas de anexo técnico.</li>
+<li>[ ] Matriz de pelo menos quatro casos cobrindo todas as combinações solicitadas.</li>
+<li>[ ] Esperado por contrato separado do retorno e de seu status observado/inferido.</li>
+<li>[ ] Código e documentação confrontados com evidência localizada.</li>
+<li>[ ] Decisão, alternativa, responsável, revalidação quando houver ajuste e limite.</li>
+<li>[ ] Origem simulada e eventual IA declaradas; raciocínio e decisão próprios.</li>
+</ul>
+<p>A entrega escrita basta. Não se exigem instalação, conta, API, Git, publicação, pesquisa externa ou demonstração adicional. Não altere o código do kit nem use dados reais.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>

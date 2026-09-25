@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AV1.1 — Decidir o que delegar · D1.1 · CESAR School</title>
+<link rel="stylesheet" href="../../estilo.css">
+<style>:root{--accent:#FF8A3D;--accent-soft:#FFAF78}</style>
+</head>
+<body><main>
+<header class="hero">
+<div class="kicker">CESAR School · D1.1 · 2026.2</div>
+<h1>AV1.1 — Decidir o que delegar</h1>
+<p class="sub">Material da disciplina · Engenharia de Software na Era da IA Generativa</p>
+<nav class="geral" aria-label="Navegação do material">
+<a href="../../README.html">Índice</a>
+<a href="README.md" download>Arquivo Markdown editável</a>
+</nav>
+</header>
+<p><strong>Individual — 35min — B1, 25/09/2026, 21h15–21h50 (Brasília).</strong> Integra AV1, que vale 20% da nota pela média simples dos desafios dos blocos com presença. Consulte a <a href="../../avaliacao.html">avaliação e rubrica pública</a>.</p>
+<div class="secao"><h2 id="objetivo">Objetivo</h2></div>
+<p>Quero escolher como realizar três tarefas de engenharia, comparar uma alternativa e justificar o que preciso verificar e assumir como responsabilidade técnica.</p>
+<div class="secao"><h2 id="contexto-e-insumos">Contexto e insumos</h2></div>
+<p>A equipe da organização fictícia Fila Clara recebe três pedidos. Todos os dados e cartões abaixo são simulados para esta avaliação. Trabalhe com o contrato fornecido; não é necessário consultar um modelo ou executar código.</p>
+<ul>
+<li><strong>R2:</strong> a listagem inclui <code>aberto</code> e <code>em_andamento</code>, exclui <code>fechado</code> e preserva a ordem de entrada.</li>
+<li><strong>R3:</strong> uma pessoa só pode visualizar chamados do próprio departamento, independentemente do estado ou da prioridade.</li>
+<li><a href="../../caso/regras.html">Contrato completo</a> e <a href="template-registro.html">template individual</a>.</li>
+</ul>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Cartão</th>
+<th>Pedido e informações disponíveis</th>
+<th>Resultado solicitado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>A pessoa responsável pela manutenção quer critérios de aceite para R2. O contrato acima está aprovado; entradas são fictícias e válidas.</td>
+<td>Rascunho de critérios que outra pessoa consiga verificar.</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>A equipe quer um teste de R3. Há dois departamentos, Oficina e Laboratório, e os estados aberto, em_andamento e fechado.</td>
+<td>Proposta de entrada, saída esperada e justificativa do teste.</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>A operação pede autorização urgente para implantar uma alteração de visibilidade. Há apenas o resumo “facilitar acesso entre áreas”; a regra nova, os dados afetados, as verificações e o responsável pela aprovação não foram confirmados.</td>
+<td>Decisão sobre autorizar a mudança em produção nas condições atuais.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="secao"><h2 id="passos-35min">Passos — 35min</h2></div>
+<ol>
+<li><strong>Ler — 5min.</strong> Identifique entrada, saída e restrições de cada cartão. Defina o que permitiria aceitar o resultado antes de escolher a modalidade.</li>
+<li><strong>Produzir individualmente — 20min.</strong> Complete as três linhas do mapa. Use <strong>sem IA</strong>, <strong>com assistência</strong> ou <strong>sem delegar a decisão</strong>; não é obrigatório usar cada rótulo uma única vez. Descreva o processo sem IA, a tarefa eventualmente delegada, a verificação e quem assume o aceite. Para um cartão, compare outra modalidade plausível e indique uma condição concreta que mudaria sua escolha. Inclua ao menos um exemplo de evidência de aceite, com entrada/saída ou informação necessária.</li>
+<li><strong>Revisar pela rubrica — 5min.</strong> Confira se cada escolha está vinculada às condições do cartão e se a alternativa altera algum custo, risco ou responsabilidade identificável.</li>
+<li><strong>Entregar — 5min.</strong> Finalize um único registro individual de até uma página, usando o template. O canal acadêmico será informado pelo professor; este material não presume endereço de envio.</li>
+</ol>
+<div class="secao"><h2 id="entrega-e-checklist">Entrega e checklist</h2></div>
+<ul>
+<li>[ ] Três linhas identificadas por C1–C3: processo sem IA, modalidade, justificativa, verificação e responsável.</li>
+<li>[ ] Trecho essencial de evidência para ao menos uma decisão; nos demais cartões, critério de aceite explícito.</li>
+<li>[ ] Uma alternativa comparada e a condição para rever uma escolha.</li>
+<li>[ ] Origem simulada dos cartões e declaração de IA, se utilizada.</li>
+</ul>
+<p><strong>Critério de conclusão:</strong> outra pessoa consegue relacionar cada modalidade ao pedido e localizar a verificação que sustenta o aceite. A entrega escrita é suficiente e não depende de fala ou câmera.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Critério AV1</th>
+<th style="text-align: right;">Peso</th>
+<th>Indicadores deste desafio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicação/decisão</td>
+<td style="text-align: right;">30%</td>
+<td>Modalidade justificada para cada cartão; responsabilidade e alternativa comparada.</td>
+</tr>
+<tr>
+<td>Evidência</td>
+<td style="text-align: right;">40%</td>
+<td>Restrições localizadas nos cartões e exemplo examinável de entrada/saída ou informação de aceite.</td>
+</tr>
+<tr>
+<td>Limites/alternativa</td>
+<td style="text-align: right;">30%</td>
+<td>Fronteira da delegação, informação ausente e condição concreta para mudar a escolha.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dica:</strong> separe produzir uma sugestão de assumir a decisão de usá-la. IA é opcional e deve ser declarada; não são necessários conta, API, Git ou publicação. Não inclua dados do empregador.</p>
+<footer>24h · Encontros: 25–26/09 e 02–03/10/2026 · Horário de Brasília</footer>
+</main></body></html>
