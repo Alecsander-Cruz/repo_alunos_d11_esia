@@ -12,3 +12,6 @@ htmlcov/
 Thumbs.db
 dist/
 build/
+apoio/llm-se-aslr.pdf
+apoio/llm-se-sop.pdf
+.gitignore
